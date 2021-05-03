@@ -1,17 +1,27 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <Navbar></Navbar>
+    <br>
+    <Home></Home>
+    <Contact></Contact>
+    <BibleVerse></BibleVerse>
+    <br>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Navbar from './components/Navbar.vue'
+import Home from './components/Home.vue'
+import Contact from './components/Contact.vue'
+import BibleVerse from './components/BibleVerse.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    Navbar,
+    Home,
+    Contact,
+    BibleVerse
   }
 }
 </script>
@@ -24,5 +34,8 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
 }
 </style>
