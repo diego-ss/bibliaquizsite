@@ -1,7 +1,6 @@
 <template>
   <div id="app">
     <Navbar></Navbar>
-    <br>
     <Home></Home>
     <Contact></Contact>
     <BibleVerse></BibleVerse>
@@ -22,6 +21,10 @@ export default {
     Home,
     Contact,
     BibleVerse
+  },
+  
+  created(){
+    document.title = "BibliaQuizApp"
   }
 }
 </script>

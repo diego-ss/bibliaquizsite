@@ -1,7 +1,11 @@
 <template>
-  <article class="column is-9 is-offset-1 message is-info">
-      <div class="message-header is-warning">Marcos 11:25-26</div>
-  <div class="message-body verse-body"> {{versiculo}} </div>
+   <article id="versiculo-div" class="column is-9 is-offset-1 message is-info">
+  <h1 class="verse-title">Versículo do dia</h1>
+  <div class="message-body verse-body"> {{versiculo}} 
+      <br>
+      <br>
+      Marcos 11:25-26
+  </div>
 </article>
 </template>
 
@@ -32,7 +36,10 @@ export default{
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Pangolin&display=swap');
 
 .verse-title{
-    font-family: 'Pangolin', sans-serif;
+    font-family: 'Monteserrat', sans-serif;
+    font-weight: bold;
+    font-size: 35px;
+    color: black;
 }
 
 .verse-body{

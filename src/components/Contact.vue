@@ -1,5 +1,5 @@
 <template>
-<form class="contact-form" @submit.prevent="sendEmail">
+<form id="contact-form" class="contact-form" @submit.prevent="sendEmail">
   <section class="hero is-fullheight">
     <div class="hero-body">
       <div class="container has-text-centered">
@@ -8,7 +8,7 @@
             <h1 class="title is-1">Fale Conosco!</h1>
             <p class="is-size-4">
               Aqui você pode nos enviar uma mensagem com feedbacks, dicas,
-              obsevações, testemunhos e tudo mais que vier em sua mente!
+              observações, testemunhos e tudo mais que vier em sua mente!
             </p>
             <p class="is-size-4">Responderemos sempre que possível!</p>
           </div>
@@ -69,12 +69,12 @@ export default {
     };
   },
   methods: {
-    sendEmail(e) {
+    async sendEmail(e) {
         console.log(this.name);
         console.log(this.email);
         console.log(this.message);
       try {
-        emailjs.sendForm(
+        await emailjs.sendForm(
           "service_31s2y5f",
           "template_0t9bvy6",
           e.target,
@@ -85,8 +85,10 @@ export default {
             message: this.message,
           }
         );
+        alert("E-mail enviado com sucesso!");
       } catch (error) {
         console.log({ error });
+        alert("Ops! Falha ao enviar e-mail.");
       }
       // Reset form field
       this.name = "";

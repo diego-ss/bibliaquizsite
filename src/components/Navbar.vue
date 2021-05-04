@@ -6,7 +6,7 @@
       <label class="title-text">BibliaQuizApp</label>
     </a>
 
-    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+    <a role="button" class="navbar-burger navbar-item-icon" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
       <span aria-hidden="true"></span>
       <span aria-hidden="true"></span>
       <span aria-hidden="true"></span>
@@ -17,17 +17,17 @@
     <div class="navbar-start">
 
 
-      <a class="navbar-item navbar-background">
+      <a class="navbar-item navbar-background" href="#home-div">
         <i class="fas fa-info-circle navbar-item-icon"></i>
         <p class="navbar-item-text">sobre</p>
       </a>
 
-        <a class="navbar-item navbar-background">
+        <a class="navbar-item navbar-background" href="#contact-form">
         <i class="fas fa-envelope navbar-item-icon"></i>
         <p class="navbar-item-text">contato</p>
       </a>
 
-    <a class="navbar-item navbar-background">
+    <a class="navbar-item navbar-background" href="#versiculo-div">
         <i class="fas fa-pray navbar-item-icon"></i>
         <p class="navbar-item-text">versículo do dia</p>
     </a>
@@ -37,7 +37,7 @@
     <div class="navbar-end navbar-background">
       <div class="navbar-item">
         <div class="buttons">
-          <a class="button is-regular">
+          <a class="button is-regular" href="https://play.google.com/store/apps/details?id=br.com.diegoss.bibliaquizapp">
             <strong>baixe agora!</strong>
           </a>
         </div>
@@ -91,7 +91,7 @@ window.onload = (function() {
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Pangolin&display=swap');
 
 .title-text{
-    font-family: 'Pangolin', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     margin-left: 5%;
     margin-right: 0;
     padding: 0;
@@ -108,6 +108,10 @@ window.onload = (function() {
 
 .navbar-item-icon{
     color: whitesmoke;
+}
+
+.navbar-item:hover{
+  background-color: #038593;
 }
 
 .navbar-background{
